@@ -1,0 +1,13 @@
+[Defines]
+  INF_VERSION                    = 0x0001001A
+  BASE_NAME                      = DeviceTree-Mainline
+  FILE_GUID                      = 117855c9-fa71-43d8-8937-37d81b19cd02
+  MODULE_TYPE                    = USER_DEFINED
+  VERSION_STRING                 = 1.0
+
+[Sources]
+  devicetree/mainline/upstream/src/arm64/rockchip/rk3588-rock-5b-plus.dts
+
+[Packages]
+  MdePkg/MdePkg.dec
+  Silicon/Rockchip/RockchipPkg.dec

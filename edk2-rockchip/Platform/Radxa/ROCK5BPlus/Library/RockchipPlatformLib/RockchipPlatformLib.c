@@ -430,10 +430,16 @@ PlatformGetDtbFileGuid (
     // DeviceTree/Vendor.inf
     0xd58b4028, 0x43d8, 0x4e97, { 0x87, 0xd4, 0x4e, 0x37, 0x16, 0x13, 0x65, 0x80 }
   };
+  STATIC CONST EFI_GUID  MainlineDtbFileGuid = {
+    // DeviceTree/Mainline.inf
+    0x117855c9, 0xfa71, 0x43d8, { 0x89, 0x37, 0x37, 0xd8, 0x1b, 0x19, 0xcd, 0x02 }
+  };
 
   switch (CompatMode) {
     case FDT_COMPAT_MODE_VENDOR:
       return &VendorDtbFileGuid;
+    case FDT_COMPAT_MODE_MAINLINE:
+      return &MainlineDtbFileGuid;
   }
 
   return NULL;
